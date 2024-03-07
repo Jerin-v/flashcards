@@ -25,9 +25,11 @@ function App() {
 
   return (
     <div className='container'>
-      <h1>Psychology Facts</h1>
-      <h3>Want to test your psychology knowledge? Click the button below!</h3>
-      <h4>There are { questions.length } cards in this quiz</h4>
+      <div className='text'>
+        <h1>Psychology Facts</h1>
+        <h3>Want to test your psychology knowledge? Click the button below!</h3>
+        <h4>Number of Cards: { questions.length }</h4>
+      </div>
       <div className='question-box' onClick={ handleClick }>
         { !showAnswer && <h2>{ questions[currentCard].question }</h2> }
         { showAnswer && <h2>{ questions[currentCard].answer }</h2> }
