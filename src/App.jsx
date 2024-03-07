@@ -24,23 +24,16 @@ function App() {
     }
   }
 
-  const showCard = () => {
-    if(!showAnswer) {
-      return 
-      { questions[currentCard].question }
-    } else {
-      return
-      <h2>{ questions[currentCard].answer }</h2>
-    }
-  }
-
 
   return (
     <div className='container'>
       <h1>Psychology Facts</h1>
       <h3>Want to test your psychology knowledge? Click the button below!</h3>
+      <h4>There are { questions.length } cards in this quiz</h4>
       <div className='question-box' onClick={ handleClick }>
         <h2>{ console.log(showAnswer) }</h2>
+        { !showAnswer && <h2>{ questions[currentCard].question }</h2> }
+        { showAnswer && <h2>{ questions[currentCard].answer }</h2> }
       </div>
 
       <button onClick={nextCard}>
