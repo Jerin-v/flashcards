@@ -9,5 +9,11 @@
 .question-box {
   border: 1px solid black;
   width: 550px;
-  height: 350px
+  height: 350px;
+  background-color: white;
+  cursor: pointer;
+}
+
+h2 {
+  color: black;
 }
