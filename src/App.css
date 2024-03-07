@@ -8,22 +8,37 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.text {
+  text-align: center;
+  padding: 25px;
 }
 
 .question-box {
-  border: 1px solid black;
   background-color: white;
+  border: 1px solid black;
   border-radius: 8px;
+  box-shadow:  0 5px 10px rgba(0, 0, 0, 0.2);
   display: flex;
   justify-content: center;
+  align-items: center;
   width: 100%;
   max-width: 600px;
   height: 350px;
   cursor: pointer;
+  margin-bottom: 10px;
 }
 
-h2 {
-  color: black;
-  display: flex;
-  align-items: center;
+button {
+  background-color: white;
+  border-radius: 4px;
+  text-align: center;
+  cursor: pointer;
+  padding:8px;
 }
+
+
+
