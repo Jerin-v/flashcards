@@ -1,16 +1,19 @@
 import React from "react";
 
 const questions = [
-    {question: "Psychology", answer: "The scientific study of behavior and mental processes."},
-    {question: "Behavior", answer: "All outward or overt actions and reactions."},
-    {question: "structuralism", answer: "Focus of the study is the structure or basic elements of the mind."}, 
-    {question: "correlation", answer: "A measure of the relationship between two variables"},
-    {question: "single-blind study", answer: "study in which the subjects do not know if they are in the experimental or the control group"}, 
-    {question: "double-blind study", answer: "study in which neither the experimenter nor the subjects know if the subjects are in the experimental or control group"}, 
-    {question: "dopamine", answer: "attention, learning, movement, cocaine, schizophrenia"}, 
-    {question: "serotonin", answer: "mood, sleep, appetite, aggression, depression [too little]"}, 
-    {question: "frontal lobe", answer: "emotions; personality, decisions, memory, planning, inhibition"}, 
-    {question: "neurons", answer: "soma has the dendrites around it which receives information and send it to the synaptic knobs and turns it into a chemical message"}, 
+    {question: "Nudiustertian", answer: "The day before yesterday"},
+    {question: "How many hearts does the octopus have.", answer: "3"},
+    {question: "What species of bird can see blue.", answer: "Owl"}, 
+    {question: "How many sets of teeth do elephants have in a lifetime.", answer: "8"},
+    {question: "what is the most common phobia to have.", answer: "Arachnophobia"}, 
+    {question: "Why do Matadors (bull fighters) have red capes.", answer: "To hide bloodstains"}, 
+    {question: "Who founded mcdonalds.", answer: "Ray Kroc"}, 
+    {question: "What is the fear of teeth called.", answer: "Odontophobia"}, 
+    {question: "How many people die from coconuts per year.", answer: "150"}, 
+    {question: "What creatures do ants farm.", answer: "Aphids"}, 
+    {question: "What religion was hitlers grandmother?", answer: "Jewish"},
+    {question: "what is the average length of a NFL players career.", answer: "3.5 Years"}, 
+
 ]
 
 export default questions;
