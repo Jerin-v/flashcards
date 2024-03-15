@@ -9,15 +9,20 @@ const Form = () => {
 
 
     return (
-        <div>
+        <div className="textbox">
             <label>
-                Can you guess the answer? 
+                Enter you guess here: 
                 <input
                     type="text"
                     value={answer}
                     onChange={e => setAnswer(e.target.value)}
+                    
                 />
             </label>
+            {console.log(answer)}
+            <button type='submit' onClick={checkAnswer}>
+                Submit
+            </button>
         </div>
     )
 }
