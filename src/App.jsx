@@ -11,6 +11,8 @@ function App() {
   const [showAnswer, setShowAnswer] = useState(false)
   const [answer, setAnswer] = useState('')
   const [check, setCheck] = useState('')
+  const [winCount, setWinCount] = useState(0)
+  const [winStreak, setWinStreak] = useState(0)
 
   const nextCard = () => {
     if(currentCard === questions.length - 1) {
@@ -54,17 +56,27 @@ function App() {
   const checkAnswer = () => {
     if(answer == questions[currentCard].answer) {
         setCheck("correct")
+        setWinCount(winCount + 1)
     } else {
         setCheck("wrong")
+        setWinCount(0)
+        streak()
     }
-}
+  }
+
+  const streak = () => {
+    if(winCount > winStreak) {
+      setWinStreak(winCount)
+    }
+  }
 
   return (
     <div className='container'>
       <div className='text'>
-        <h1>Psychology Facts</h1>
-        <h3>Want to test your psychology knowledge? Click the button below!</h3>
+        <h1>Fun Facts</h1>
+        <h3>Want to test your fun fact knowledge? Click the button below!</h3>
         <h4>Number of Cards: { questions.length }</h4>
+        <h5>Current Streak: {winCount}  Longest Win Streak: {winStreak}</h5>
       </div>
       <div className='question-box' onClick={ handleClick }>
         { !showAnswer && <h2>{ questions[currentCard].question }</h2> }
