@@ -19,6 +19,8 @@ function App() {
       setCurrentCard(currentCard + 1)
     }
     setShowAnswer(false)
+    setAnswer('')
+    setCheck('')
   }
 
   const prevCard = () => {
@@ -28,6 +30,8 @@ function App() {
       setCurrentCard(currentCard - 1)
     }
     setShowAnswer(false)
+    setAnswer('')
+    setCheck('')
   }
 
   const handleClick = () => {
