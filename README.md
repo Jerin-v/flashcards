@@ -4,7 +4,7 @@ Submitted by: **Jerin**
 
 This web app: **A set of flashcards to quiz yourself over!**
 
-Time spent: **6** hours spent in total
+Time spent: **7** hours spent in total
 
 ## Required Features
 
@@ -22,8 +22,8 @@ The following **required** functionality is completed:
 
 The following **optional** features are implemented:
 
-- [ ] A shuffle button is used to randomize the order of the cards
-- [ ] A counter displays the user's current and longest streak of correct responses
+- [x] A shuffle button is used to randomize the order of the cards
+- [x] A counter displays the user's current and longest streak of correct responses
 - [ ] Cards contains images in addition to or in place of text
 - [ ] Cards have different visual styles such as color based on their category
   - [ ] *visual style implemented*
