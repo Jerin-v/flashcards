@@ -46,7 +46,21 @@ button {
 
 .buttons {
   display: flex;
+  max-width: 200px;
+  width: 100%;
+  justify-content: center;
 }
 
+.textbox {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
 
+#wrong {
+  background-color: red;
+}
 
+#correct {
+  background-color: rgb(119, 218, 119);
+}
