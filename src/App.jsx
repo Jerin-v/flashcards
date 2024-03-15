@@ -34,6 +34,15 @@ function App() {
     setCheck('')
   }
 
+  const shuffle = () => {
+    for(var i = questions.length - 1; i > 0; i--) {
+      var j = Math.floor(Math.random() * (i + 1))
+      var temp = questions[i];
+      questions[i] = questions[j];
+      questions[j] = temp;
+    }
+  }
+
   const handleClick = () => {
     if(!showAnswer){
       setShowAnswer(true)
@@ -60,7 +69,6 @@ function App() {
       <div className='question-box' onClick={ handleClick }>
         { !showAnswer && <h2>{ questions[currentCard].question }</h2> }
         { showAnswer && <h2>{ questions[currentCard].answer }</h2> }
-        {console.log(currentCard)}
       </div>
       
 
@@ -87,7 +95,11 @@ function App() {
         
         <button onClick={nextCard}>
             Next
-          </button>
+        </button>
+
+        <button onClick={shuffle}>
+            Shuffle
+        </button>
       </div>
 
     </div>
