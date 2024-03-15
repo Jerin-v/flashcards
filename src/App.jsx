@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import questions from './Questions'
+import Form from './Form'
 
 
 
@@ -46,6 +47,10 @@ function App() {
         { !showAnswer && <h2>{ questions[currentCard].question }</h2> }
         { showAnswer && <h2>{ questions[currentCard].answer }</h2> }
         {console.log(currentCard)}
+      </div>
+      <div className='text-box'>
+        <Form />
+
       </div>
 
       <div className='buttons'>
