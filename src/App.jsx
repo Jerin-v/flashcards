@@ -10,8 +10,20 @@ function App() {
   const [showAnswer, setShowAnswer] = useState(false)
 
   const nextCard = () => {
-    const randomIndex = Math.floor(Math.random() * questions.length)
-    setCurrentCard(randomIndex)
+    if(currentCard === questions.length - 1) {
+      return
+    } else {
+      setCurrentCard(currentCard + 1)
+    }
+    setShowAnswer(false)
+  }
+
+  const prevCard = () => {
+    if(currentCard === 0) {
+      return
+    } else {
+      setCurrentCard(currentCard - 1)
+    }
     setShowAnswer(false)
   }
 
@@ -33,8 +45,13 @@ function App() {
       <div className='question-box' onClick={ handleClick }>
         { !showAnswer && <h2>{ questions[currentCard].question }</h2> }
         { showAnswer && <h2>{ questions[currentCard].answer }</h2> }
+        {console.log(currentCard)}
       </div>
 
+      <button onClick={prevCard}>
+        Previous
+      </button>
+      
       <button onClick={nextCard}>
           Next
         </button>
