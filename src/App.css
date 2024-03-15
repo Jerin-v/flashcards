@@ -39,6 +39,8 @@ button {
   text-align: center;
   cursor: pointer;
   padding:8px;
+  max-width: 80px;
+  width: 100%;
 }
 
 
