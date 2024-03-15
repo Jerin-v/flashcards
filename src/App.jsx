@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import questions from './Questions'
-import Form from './Form'
+
 
 
 
@@ -9,6 +9,8 @@ function App() {
 
   const [currentCard, setCurrentCard] = useState(0)
   const [showAnswer, setShowAnswer] = useState(false)
+  const [answer, setAnswer] = useState('')
+  const [check, setCheck] = useState('')
 
   const nextCard = () => {
     if(currentCard === questions.length - 1) {
@@ -36,6 +38,14 @@ function App() {
     }
   }
 
+  const checkAnswer = () => {
+    if(answer == questions[currentCard].answer) {
+        setCheck("correct")
+    } else {
+        setCheck("wrong")
+    }
+}
+
   return (
     <div className='container'>
       <div className='text'>
@@ -48,10 +58,23 @@ function App() {
         { showAnswer && <h2>{ questions[currentCard].answer }</h2> }
         {console.log(currentCard)}
       </div>
-      <div className='text-box'>
-        <Form />
+      
 
-      </div>
+      <div className="textbox">
+            <label>
+                Enter you guess here: 
+                <input
+                    id={check}
+                    type="text"
+                    value={answer}
+                    onChange={e => setAnswer(e.target.value)}
+                    
+                />
+            </label>
+            <button type='submit' onClick={checkAnswer}>
+                Submit
+            </button>
+        </div>
 
       <div className='buttons'>
         <button onClick={prevCard}>
