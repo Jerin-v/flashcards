@@ -48,13 +48,15 @@ function App() {
         {console.log(currentCard)}
       </div>
 
-      <button onClick={prevCard}>
-        Previous
-      </button>
-      
-      <button onClick={nextCard}>
-          Next
+      <div className='buttons'>
+        <button onClick={prevCard}>
+          Previous
         </button>
+        
+        <button onClick={nextCard}>
+            Next
+          </button>
+      </div>
 
     </div>
     
